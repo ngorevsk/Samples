@@ -3,8 +3,11 @@
 This is a simple WPF project I completed during a weekend.  
 
 Domain: To-Do List
+
 Interface: Native GUI
+
 Platform: .NET
+
 Language: C#  
 
 ## Requirements:
