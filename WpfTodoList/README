@@ -1,41 +1,13 @@
-Steps to run project:
+# WpfTodoList
 
-1) Open Solution in Visual Studio 2017.
-2) Perform NuGet package restore on solution to satisfy dependencies.
-3) Set WpfTodoList project as startup project.
+This is a simple WPF project I completed during a weekend.  
 
-Interface selection:
+Domain: To-Do List
+Interface: Native GUI
+Platform: .NET
+Language: C#  
 
-ITodo
-ITodoManager
-
-Domain selection:
-
-MainView - View that shows overview & details of selected item, also allows adding/deleting Todo items.
-AddView - View that allows user to input dat to new Todo item that will be added.
-Todo - Model of Todo item that includes all properties mentioned in requirements.
-TodoManager - Model representing collection of Todo items that can be manipulated.
-
-
-Other design considerations:
-
-Prism - Framework for purpose for designing loosely coupled, maintainable, and testable application.
-
-
-Unit Tests:
-
-Unit tests are locted in the UnitTest project.
-It contains tests against the basic requirements mentioned in the posting.
-
-
-Other notes:
-
-Setting up TreeView xaml and bindings took the most time along with creating the tests for
-the unit testing project, as I am not very familiar with either.
-
--------------
-
-Requirements:
+## Requirements:
 
 TODO List
 
@@ -50,3 +22,14 @@ As a user, I can mark a TODO as completed.
 As a user, when I see all the TODOs in the overview, if today's date is past the TODO's deadline, highlight it.
 A TODO consists of a task (just a simple sentence or two is fine), a deadline date, a completed flag, and an optional "more details" field that allows for more details to be given (again, a single large text area is fine for this).
 The list of TODOs can be kept in memory.
+
+## Steps to run project:
+
+1) Open Solution in Visual Studio 2017.
+2) Perform NuGet package restore on solution to satisfy dependencies.
+3) Set WpfTodoList project as startup project.
+
+## Design considerations:
+
+Prism - (MVVM) Framework for purpose for designing loosely coupled, maintainable, and testable application.
+Unit Tests - UnitTest project contains tests against the basic requirements of the app.  As I was working on unit tests, I ended up refactoring the MainView and moved out most logic dealing with manipulating the root collection to the TodoManager class.
